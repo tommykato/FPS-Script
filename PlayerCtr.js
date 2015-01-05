@@ -23,8 +23,8 @@ function FixedUpdate () {
 		Destroy(gameObject);	//プレイヤー削除
 
 		//リスポーンする
-		Instantiate(gameObject, playerRespawn, transform.rotation);
-		Instantiate(playerCamera, cameraRespawn, transform.rotation);
+		Instantiate(gameObject, playerRespawn, transform.rotation);	//プレイヤーの召喚
+		Instantiate(playerCamera, cameraRespawn, transform.rotation);	//カメラの召喚
 	}
 }
 
