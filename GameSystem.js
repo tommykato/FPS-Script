@@ -1,25 +1,26 @@
 #pragma strict
 
+//ポーズモードかどうか
 public var pause : boolean;
 
 function Start () {
-	pause = false;
+	pause = false;	//一時停止(ポーズ)を切にする
 }
 
 function Update () {
-	if(Input.GetKeyDown(KeyCode.Escape)){
+	if(Input.GetKeyDown(KeyCode.Escape)	/*escが押された時*/){
 		if(pause == false){
-			pause = true;
+			pause = true;	//ポーズモード
 
-			Screen.showCursor = true;
-    		Screen.lockCursor = false;
+			Screen.showCursor = true;	//カーソル表示
+    		Screen.lockCursor = false;	//カーソル固定を解除
 		}else{
-			pause = false;
+			pause = false;	//ポーズモード切
 		}
 	}
 
-	if(pause == false){
-		Screen.showCursor = false;
-		Screen.lockCursor = true;
+	if(pause == false	/*ポーズモード切なら*/){
+		Screen.showCursor = false;	//カーソル非表示
+		Screen.lockCursor = true;	//カーソル固定
 	}
 }
