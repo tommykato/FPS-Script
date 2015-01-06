@@ -27,6 +27,7 @@ function shot(){	//発射関数
 
 function OnTriggerStay (other : Collider){	//射程内に何かが入ったら
 	if (other.tag == "Player"){	//そのタグが"Player"なら
+	
 		//プレイヤーの方を向く
 		var targetPosition : Vector3 = playerTransform.position - transform.position;
 
