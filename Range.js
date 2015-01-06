@@ -34,7 +34,7 @@ function OnTriggerStay (other : Collider){	//射程内に何かが入ったら
 
 		enemyTransform.rotation = Quaternion.RotateTowards(enemyTransform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-	//Interval_E秒毎に発射	
+		//Interval_E秒毎に発射	
 		time_E += Time.deltaTime;
 
 		if(time_E >= Interval_E){
