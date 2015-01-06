@@ -7,7 +7,7 @@ var enemyTransform : Transform;	//敵Mobの座標
 
 public var time_E : float;
 public var Interval_E : float = 1;	//発射の間隔
-var rotationSpeed : float = 45;	//回転(振り向く)速度
+var rotationSpeed : float = 52.5;	//回転(振り向く)速度
 
 function Start () {
 
@@ -22,7 +22,7 @@ function shot(){	//発射関数
 
 	var direction = (muzzle_E.position - enemyTransform.position).normalized;	//発射方向の設定
 
-	bullet.rigidbody.velocity = direction * 100;	//発射
+	bullet.rigidbody.velocity = direction * 50;	//発射
 }
 
 function OnTriggerStay (other : Collider){	//射程内に何かが入ったら
