@@ -7,7 +7,7 @@ var enemyTransform : Transform;	//敵Mobの座標
 
 public var time_E : float;
 public var Interval_E : float = 1;	//発射の間隔
-var rotationSpeed : float = 52.5;	//回転(振り向く)速度
+var rotationSpeed : float = 60;	//回転(振り向く)速度
 
 function Start () {
 
