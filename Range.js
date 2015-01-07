@@ -22,7 +22,7 @@ function shot(){	//発射関数
 
 	var direction = (muzzle_E.position - enemyTransform.position).normalized;	//発射方向の設定
 
-	bullet.rigidbody.velocity = direction * 50;	//発射
+	bullet.rigidbody.velocity = direction * 100;	//発射
 }
 
 function OnTriggerStay (other : Collider){	//射程内に何かが入ったら
