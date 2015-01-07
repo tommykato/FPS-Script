@@ -13,14 +13,16 @@ function Update () {
 			pause = true;	//ポーズモード
 
 			Screen.showCursor = true;	//カーソル表示
-    		Screen.lockCursor = false;	//カーソル固定を解除
+    			Screen.lockCursor = false;	//カーソル固定を解除
 		}else{
 			pause = false;	//ポーズモード切
 		}
 	}
 
-	if(pause == false	/*ポーズモード切なら*/){
+	if(pause == false){	/*ポーズモード切なら*/
 		Screen.showCursor = false;	//カーソル非表示
 		Screen.lockCursor = true;	//カーソル固定
+	}else if(Input.GetKey(KeyCode.Return) && pause == true){	//Enterが押されたら
+    		Application.Quit();	//アプリケーションを終了
 	}
 }
