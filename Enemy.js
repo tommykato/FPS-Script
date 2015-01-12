@@ -2,7 +2,7 @@
 
 var Explosion : GameObject; //敵Mobを倒した際にでる爆発のエフェクト
 
-private var life : float = 50;
+private var life : float = 300;
 
 function Start () {
 
