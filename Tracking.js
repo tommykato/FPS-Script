@@ -2,6 +2,7 @@
 
 var enemyTransform : Transform;
 var enemy : GameObject;
+public var muzzle : Transform;
 
 var rotationSpeed : float = 60;
 
@@ -23,7 +24,7 @@ function OnTriggerStay(other : Collider) {
 
 		enemyTransform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-		enemy.rigidbody.velocity = targetPosition * 0.5;
+		enemy.rigidbody.velocity = (muzzle.position - transform.position) * 10;
 	}
 }
 
