@@ -4,7 +4,8 @@ var enemyTransform : Transform;
 var enemy : GameObject;
 public var muzzle : Transform;
 
-var rotationSpeed : float = 60;
+var rotationSpeed : int = 60;
+public var Speed : float;
 
 var Tracking : boolean;
 
@@ -24,14 +25,6 @@ function OnTriggerStay(other : Collider) {
 
 		enemyTransform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-		enemy.rigidbody.velocity = (muzzle.position - transform.position) * 10;
+		enemy.rigidbody.velocity = transform.forward * 15;
 	}
-}
-
-function Begin() {
-
-}
-
-function Stop() {
-
 }
