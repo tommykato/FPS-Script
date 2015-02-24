@@ -22,6 +22,7 @@ function Update () {
 
 		//ジャンプ
 		if(Input.GetButton ("Jump")) {
+			moveDirection.y = jumpSpeed;
 			time += Time.deltaTime;
 			jump = true;
 		}
